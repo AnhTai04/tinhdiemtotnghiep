@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <title> CÔNG CỤ TÍNH ĐIỂM TỐT NGHIỆP THPT 2022</title>
+       <link rel="stylesheet" type="text/css" href="sitai.css">  
+    </head> 
+    <body>
+        <script type="text/javascript">
+            function myfunction() {
+                var toan = document.getElementById('toan').value;
+                var van = document.getElementById('van').value;
+                var anh = document.getElementById('anh').value;
+                var ly = document.getElementById('ly').value;
+                var hoa = document.getElementById('hoa').value;
+                var sinh = document.getElementById('sinh').value;
+                var dc = document.getElementById('dc').value;
+                var ut = document.getElementById('ut').value;
+                var tb = document.getElementById('tb').value;
+                var tong4mon = toan+van+anh+(sinh+ly+hoa)/3;
+                var diemtinh = (((tong4mon/4 + dc)*7+tb*3)/10)+ut;
+                 if (toan<=1 || van<=1 || anh<=1 || ly<=1 || hoa<=1 || sinh<=1) {
+                  alert('Điểm của bạn không đủ tốt nghiệp :( ');
+                 } else if (diemtinh>=5) {
+                    alert('Chúc mừng bạn đã đỗ tốt nghiệp <3 ');
+                  } else alert('Điểm của bạn không đủ tốt nghiệp');
+            }
+            
+        s
+        </script>
+        <center> 
+       <div class="login">
+          <h2>TÍNH ĐIỂM THI TỐT NGHIỆP 2022</h2>
+          <input type="number" placeholder="TOÁN" id="toan"> 
+          <input type="number" placeholder="NGỮ VĂN" id="van"> 
+          <input type="number" placeholder="TIẾNG ANH" id="anh" > 
+          <input type="number" placeholder="VẬT LÝ (HOẶC SỬ)" id="ly"> 
+          <input type="number" placeholder="HÓA HỌC (HOẶC ĐỊA)" id="hoa"> 
+          <input type="number" placeholder="SINH HỌC (HOẶC GDCD)" id="sinh"> 
+          <input type="number" placeholder="ĐIỂM CỘNG (NẾU CÓ)" id="dc"> 
+          <input type="number" placeholder="ĐIỂM ƯU TIÊN (NẾU CÓ)" id="ut"> 
+          <input type="number" placeholder="ĐIỂM TB NĂM 12" id="tb"> 
+           <br>
+          <button onclick="myfunction()"> TÍNH ĐIỂM </button> 
+        </div>
+       </center> 
+
+    </body>
+</html>
